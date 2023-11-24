@@ -1,0 +1,187 @@
+@font-face {
+    font-family: 'artifikamedium';
+    src: url('../fonts/artifika-regular-webfont.woff2') format('woff2'),
+         url('../fonts/artifika-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Appliquer les propriétés CSS surs tous les éléments de la page */
+* {
+    /* faire en sorte que le padding et la bordure soient calculés à l'itnérieur du conteneur. on change le mode de calcul à l'aide de box-sizing. */
+    box-sizing: border-box;
+}
+
+/* Ajustement de la valeur par défaut du rem face au px pour des calculs super simples */
+html {
+    /* Par défaut 1rem = 16px = 100% */
+    font-size: 62.5%; /* ainsi 1rem = 10px au lieu de 16px */
+}
+
+body {
+    /* on applique la police Roboto par défaut sur tout le site (en cascade) */
+    font-family: 'Roboto', sans-serif;
+
+    /* surcharger la marge par défaut appliquée par le navigateur */
+    margin: 0;
+
+    /* taille par défaut pour éviter d'avoir tous les éléments avec une taille à 10px suite au changement de la taille d'1 rem */
+    font-size: 1.6rem;
+}
+
+h1 {
+    /* on applique la police chargée dans le bloc @font-face en debut de fichier */
+    font-family: 'artifikamedium';
+}
+
+/* Les sélecteurs d'éléments HTML */
+p {
+    color: rgb(34, 124, 157);
+}
+
+/* Les sélecteurs de classes 
+le . permet de cibler une classe
+*/
+.welcome {
+    color: #e75607;
+
+    /* changer la taille du texte */
+    font-size: 24px;
+    /* mettre le texte en gras */
+    font-weight: bold;
+}
+
+/* Les sélecteurs d'id 
+le # permet de cibler un id
+*/
+#presentation {
+    /* background-color: ghostwhite; */
+    /* fond imagé 
+    ../ permet de remonter au dossier parent
+    */
+    background-image: url("../img/background-presentation.jpg");
+    /* changer la taille de l'image de fond
+    la valeur cover est très pratique puisqu'elle optimise le remplissage en largeur et en hauteur */
+    background-size: cover;
+
+    /* centrer le texte "en cascade" */
+    text-align: center;
+
+    /* Marges intérieures */
+    padding: 100px 40px;
+
+    /* testons l'unité vh (pour viewport height) */
+    /* height: 100vh; */
+}
+
+.btn {
+    /* enlever le soulignement par défaut d'un lien */
+    text-decoration: none;
+    color: white;
+    background-color: #e75607;
+    padding: 10px;
+    /* bords arrondis */
+    border-radius: 5px;
+}
+
+/* appliquer les styles uniquement au survol d'un élément */
+.btn:hover {
+    background-color: #db530a;
+}
+
+/* Mise en pratique de Flexbox */
+header {
+    /* positionnement
+    Comment l'élément doit se positionnner ? */
+    position: fixed;
+    /* Où doit se positionner l'élément ? */
+    top: 0;
+    left: 0;
+    /* par défaut l'élément fixé ne prend que l'espace dont il a besoin */
+    right: 0;
+
+    background-color: white;
+
+    /* gérer les superpositions sur l'axe z (causées par le positionnement) et forcer le header en premier plan */
+    z-index: 1;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+header img {
+    width: 9rem;
+}
+
+nav ul li {
+    /* changer le comportement d'affichage des éléments de la liste
+    inline-block : l'élément se comporte en inline avec la possibilité de dimensionner l'élément
+    */
+    display: inline-block;
+}
+
+section h2 {
+    /* pas de texte tout en majuscule directement dans le HTML !!! on utilise la propriété text-transform */
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 3rem;
+    font-family:'artifikamedium';
+}
+
+/* Flexbox sur l'encart nos services */
+.row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.element {
+    flex-basis: 32%;
+    padding: 0 1rem;
+}
+
+.element i {
+    font-size: 3rem;
+    color: #db530a;
+    text-align: center;
+    /* l'élément est inline par défaut donc difficile de se centrer dans ces conditions on vient donc changer le comportement d'affichage */
+    display: block;
+}
+
+/* Exemple de Positionnement absolu avec les légendes des images */
+.media {
+    display: flex;
+}
+
+.media figure {
+    flex-basis: 50%;
+
+    /* On positionne l'élément et donc la légende va se positionner par rapport à ce conteneur */
+    position: relative;
+}
+
+figure img {
+    /* images responsives (car l'image respecte toujours la largeur de son conteneur --> elle s'adapte) */
+    width: 100%;
+}
+
+figure figcaption {
+    /* Comment doit se positionner la légende ? */
+    position: absolute;
+    /* Où doit se positionner la légende */
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    background-color: #db530a;
+    color: white;
+    padding: 1rem;
+}

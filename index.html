@@ -1,0 +1,226 @@
+<!-- Le doctype permet de savoir quelle version de HTML nous utilisons -->
+<!DOCTYPE html>
+<!-- L'attribut lang permet de spécifier la langue du document HTML -->
+<html lang="fr">
+<!-- En-tête de la page -->
+
+<head>
+    <title>Ma première page web</title>
+
+    <!-- Chargement d'une police Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+    <!-- Chargement de notre feuille de style -->
+    <link rel="stylesheet" href="css/main.css">
+
+    <!-- Chargement Font Awesome -->
+    <script src="https://kit.fontawesome.com/477e17b079.js" crossorigin="anonymous"></script>
+</head>
+<!-- Corps de la page -->
+
+<body>
+
+    <header>
+        <div class="container">
+            <img src="img/logo.svg" alt="DWWM Saint Michel">
+
+            <nav>
+                <ul>
+                    <li>
+                        <!-- Les ancres
+                        on ajoute un id à l'endroit où l'on souhaite se rendre puis on mentionne cet id en le préfixant d'un # dans l'attribut href
+                        -->
+                        <a href="#presentation">Présentation</a>
+                    </li>
+                    <li>
+                        <a href="#services">Services</a>
+                    </li>
+                    <li>
+                        <a href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div id="presentation">
+        <p class="welcome">Bienvenue dans la formation DWWM !</p>
+        <p class="welcome">On n'a peur de rien on se nourrit de galettes bretonnes...</p>
+        <a class="btn" href="page2.html">En savoir plus</a>
+    </div>
+
+    <section id="services">
+        <h2>Nos services</h2>
+
+        <div class="row">
+            <div class="element">
+                <i class="fa-solid fa-bread-slice"></i>
+                <h3>Des gâteaux</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam veniam voluptatibus accusantium
+                    molestias qui sapiente magni repellat, recusandae tenetur vitae expedita nulla quas dolor libero
+                    animi veritatis sit ut quasi.</p>
+            </div>
+            <div class="element">
+                <i class="fa-solid fa-mug-saucer"></i>
+                <h3>Du café</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, neque perspiciatis. Sit provident
+                    quidem sapiente deserunt culpa itaque exercitationem laudantium beatae, rerum qui enim ipsa
+                    repellendus inventore voluptas debitis perferendis?</p>
+            </div>
+            <div class="element">
+                <i class="fa-solid fa-code"></i>
+                <h3>Du code</h3>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque, ad eveniet expedita nihil dolore
+                    quam quas distinctio illum sapiente et aliquid inventore dicta corrupti impedit neque aut blanditiis
+                    nam. Recusandae?</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Les titres -->
+    <h1>Ma première page web</h1>
+    <h2>Titre de niveau 2</h2>
+    <!-- idem pour les titres de niveau 3, 4 et 5 -->
+    <h6>Titre de niveau 6</h6>
+
+    <!-- Les paragraphes -->
+    <p>Mon super paragraphe !</p>
+
+    <!-- La div est un conteneur (de type bloc) pour structurer notre page -->
+    <div>
+        <!-- Les liens 
+        l'attribut href contient l'url vers la ressource à consulter
+        l'attribut target avec la valeur _blank permet d'ouvrir dans un nouvel onglet
+        -->
+        <a href="http://google.fr" target="_blank">Lien vers Google</a>
+    </div>
+
+    <!-- Deux types d'urls :
+        - url absolue : url complète (protocole + nom de domaine)
+        - url relative : url relative par rapport à l'endroit où l'on se situe
+        -->
+    <a href="page2.html">Lien vers ma page 2</a>
+
+    <!-- Les listes
+    liste non ordonnée (liste à puces) -->
+    <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+    </ul>
+
+    <!-- Liste ordonnée -->
+    <ol>
+        <li>Médaille d'or</li>
+        <li>Médaille d'argent</li>
+        <li>Médaille de bronze</li>
+    </ol>
+
+    <div class="media">
+        <figure>
+            <!-- Chargement d'une image avec url absolue -->
+            <img src="https://images.pexels.com/photos/266706/pexels-photo-266706.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                alt="Texte alternatif important pour l'accessibilité - Le renseigner si l'image apporte des informations complémentaires - Le laisser vide si il s'agit d'une image de décoration" />
+            <figcaption>Les bons biscuits Saint Michel dans un bol</figcaption>
+        </figure>
+        <figure>
+            <!-- Chargement d'une image avec url relative -->
+            <img src="img/biscuits.jpg" alt="" />
+            <figcaption>Les bons biscuits Saint Michel en vrac</figcaption>
+        </figure>
+    </div>
+
+    <!-- Les contenus intégrables -->
+    <!-- Vidéo YouTube -->
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/GaJ4RI-Ziu8" title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen></iframe>
+
+    <!-- Carte GMaps -->
+    <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5975.51892275404!2d-2.0303297500236965!3d48.64894372312854!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x480e81108fe0c081%3A0x23c29206732d547!2sL&#39;Atelier%20St%20Michel%20St%20Malo!5e1!3m2!1sfr!2sfr!4v1679986869102!5m2!1sfr!2sfr"
+        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+    <!-- Les tableaux -->
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Fruits</th>
+                <th>Poids</th>
+                <th>Prix</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Banane</td>
+                <td>2kg</td>
+                <td>2€90</td>
+            </tr>
+            <tr>
+                <td>Melon</td>
+                <!-- fusion d'une colonne sur plusieurs colonnes -->
+                <td colspan="2">3€49 la pièce</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- Les formulaires -->
+    <form id="contact" action="fichierDeTraitementDesDonnees.php" method="post">
+        <div>
+            <!-- Pour "lier" le label et le champ de saisi il faut ajouter un id sur l'input et le mentionner dans l'attribut for du label -->
+            <label for="inputFirstname">Votre prénom :</label>
+            <!-- L'attribut required rend le champ obligatoire -->
+            <input type="text" id="inputFirstname" name="firstname" required />
+        </div>
+        <div>
+            <label for="inputPassword">Votre mot de passe :</label>
+            <input type="password" name="password" id="inputPassword">
+        </div>
+        <div>
+            <label for="textareaMessage">Votre message :</label>
+            <textarea name="message" id="textareaMessage" cols="30" rows="10"></textarea>
+        </div>
+        <div>
+            <label for="selectCountry">Votre pays :</label>
+            <select name="country" id="selectCountry">
+                <option value="be">Belgique</option>
+                <option value="fr" selected>France</option>
+                <option value="ch">Suisse</option>
+            </select>
+        </div>
+        <!-- Cases à cocher -->
+        <div>
+            <p>Quels sont vos loisirs ?</p>
+
+            <div>
+                <input type="checkbox" name="sport" id="checkboxSport">
+                <label for="checkboxSport">Sport</label>
+            </div>
+            <div>
+                <input type="checkbox" name="galettes" id="checkboxGalettes">
+                <label for="checkboxGalettes">Galettes</label>
+            </div>
+        </div>
+        <!-- Boutons radio -->
+        <div>
+            <!-- L'attribut checked permet de cocher par défaut une case à cocher ou un bouton radio -->
+            <input type="radio" name="personType" value="particulier" id="radioParticulier" checked>
+            <label for="radioParticulier">Je suis un particulier</label>
+
+            <input type="radio" name="personType" value="pro" id="radioPro">
+            <label for="radioPro">Je suis un professionnel</label>
+        </div>
+
+        <!-- Bouton de soumission du formulaire -->
+        <input type="submit" value="Valider">
+    </form>
+
+    <!-- Les vidéos -->
+    <video src="vid/biscuits.mp4" controls autoplay muted loop></video>
+</body>
+
+</html>
